@@ -1,0 +1,19 @@
+{
+  "name": "tailwindcss-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "author": "HaruAyakaji",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.4.1"
+  }
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tailwindcss</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-neutral-800 text-neutral-100">
+    <!-- navbar -->
+    <nav class="sticky top-0 z-10 flex items-center gap-3 bg-neutral-800 px-4 py-2">
+      <div class="group cursor-pointer">
+        <svg class="size-5 fill-current group-hover:hidden">
+          <use href="#bars3" />
+        </svg>
+        <svg class="hidden size-5 fill-current group-hover:block">
+          <use href="#chevronDoubleRight" />
+        </svg>
+      </div>
+      <button type="button" class="flex items-center gap-1 rounded-md p-1 hover:bg-neutral-700">
+        <img src="./images/profile.png" alt="profile.png" class="size-5 rounded-md" />
+        <span>HaruAyakaji</span>
+      </button>
+    </nav>
+
+    <section class="container mx-auto p-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <!-- container header -->
+      <header class="mb-4 px-2 py-1">
+        <h1 class="flex items-center gap-2 text-2xl font-black tracking-wide">
+          <img src="./images/profile.png" alt="profile.png" class="size-8 rounded-md" />
+          <span>HaruAyakaji</span>
+        </h1>
+      </header>
+
+      <!-- container navbar -->
+      <nav class="mb-8 flex justify-between border-b border-neutral-500 pb-1">
+        <button
+          type="button"
+          class="flex items-center gap-1 rounded-md px-2 py-1 font-medium tracking-tight hover:bg-neutral-700"
+        >
+          <svg class="size-5 fill-current">
+            <use href="#home" />
+          </svg>
+          <span>Home</span>
+          <svg class="size-5 fill-current">
+            <use href="#chevronDown" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="flex items-center gap-1 rounded-md px-2 py-1 font-medium tracking-tight opacity-60 hover:bg-neutral-700 hover:opacity-100"
+        >
+          <svg class="size-5 fill-current">
+            <use href="#magnifyingGlass" />
+          </svg>
+          <span>Search</span>
+        </button>
+      </nav>
+
+      <!-- container main-area -->
+      <div class="mb-40 flex flex-wrap items-start justify-between gap-8">
+        <my-profile class="flex flex-wrap items-center gap-2 md:sticky md:top-14 md:block">
+          <div class="peer mb-4 size-[200px] overflow-hidden rounded-full shadow-[0_0_8px_#fff]">
+            <img
+              src="./images/profile.png"
+              alt="profile.png"
+              class="duration-150 hover:scale-105"
+            />
+          </div>
+          <p
+            class="flex-1 px-4 text-lg duration-150 peer-hover:text-red-300 max-md:min-w-[250px] md:w-[200px]"
+          >
+            小野寺春が大好きだ
+          </p>
+        </my-profile>
+
+        <my-content class="basis-full md:flex-1">
+          <nav class="mb-6 flex border-b border-neutral-500">
+            <button
+              type="button"
+              class="flex items-center gap-1 rounded-t-md border-b-2 px-2 py-1 font-medium tracking-tight hover:bg-neutral-700"
+            >
+              <svg class="size-5 fill-current">
+                <use href="#checkBadge" />
+              </svg>
+              <span class="whitespace-nowrap">All Cards</span>
+            </button>
+            <button
+              type="button"
+              class="flex items-center gap-1 rounded-t-md px-2 py-1 font-medium tracking-tight opacity-60 hover:bg-neutral-700 hover:opacity-100"
+            >
+              <svg class="size-5 fill-current">
+                <use href="#checkBadge" />
+              </svg>
+              <span class="whitespace-nowrap">Onodera Haru</span>
+            </button>
+          </nav>
+
+          <!-- card group -->
+          <card-group class="grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4">
+            <card-item
+              class="group cursor-pointer overflow-hidden rounded-md bg-neutral-700/85 hover:bg-neutral-600/85 hover:shadow-[inset_0_0_4px_#ffffff3f]"
+            >
+              <div class="h-[120px] overflow-hidden">
+                <img
+                  src="./images/cover.png"
+                  alt="cover.png"
+                  class="size-full object-cover duration-150 group-hover:scale-105"
+                />
+              </div>
+              <div class="p-2.5">
+                <h5 class="mb-0.5 flex items-center gap-2 font-semibold">
+                  <img src="./images/react.png" alt="react.png" class="size-4" />
+                  <span>小野寺春は可愛い</span>
+                </h5>
+                <span class="rounded bg-emerald-700 p-0.5 text-xs">Onodera Haru</span>
+              </div>
+            </card-item>
+          </card-group>
+        </my-content>
+      </div>
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="bars3" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="chevronDoubleRight" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M15.28 9.47a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 1 1-1.06-1.06L13.69 10 9.97 6.28a.75.75 0 0 1 1.06-1.06l4.25 4.25ZM6.03 5.22l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L8.69 10 4.97 6.28a.75.75 0 0 1 1.06-1.06Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="home" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="chevronDown" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="magnifyingGlass" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="checkBadge" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+
+    <script type="module">
+      const card = document.querySelector('card-item');
+      card.parentElement.innerHTML += card.outerHTML.repeat(9);
+    </script>
+  </body>
+</html>

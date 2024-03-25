@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply border-current;
+  }
+
+  :root {
+    @apply scroll-smooth;
+    scrollbar-width: thin;
+    scrollbar-color: theme(colors.neutral.600) transparent;
+  }
+}
